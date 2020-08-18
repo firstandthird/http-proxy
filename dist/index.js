@@ -423,7 +423,9 @@ function proxy (config={}) {
     if (Key.startsWith('staging/'))     Key = Key.replace('staging/', '')
     if (Key.startsWith('production/'))  Key = Key.replace('production/', '')
 
-    /**
+    if (Key.startsWith('_static/'))     Key = Key.replace('_static/', '')
+
+      /**
      * REST API [deprecated]: flag `staging/`, `production/` requests
      */
     let rootPath
